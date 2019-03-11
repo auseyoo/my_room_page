@@ -222,7 +222,7 @@ jQuery.easing["jswing"]=jQuery.easing["swing"];jQuery.extend(jQuery.easing,{def:
 
         var parentHeight = (settings.parentSelector && $this.parents(settings.parentSelector).length) ?
           $this.parents(settings.parentSelector).first().height() : $this.parent().height();
-
+          
         $this.css(
           settings.cssAttribute, ( ( ( parentHeight - $this.height() ) / 2 ) + parseInt(settings.verticalOffset) )
         );
