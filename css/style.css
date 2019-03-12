@@ -265,7 +265,7 @@ blockquote {
 .portfolio-filter {
     list-style: none;
     padding: 0;
-    margin: 0 -20px 20px 0;
+    margin: 0 -20px 60px 0;
 }
 
 .portfolio-filter > li {
@@ -312,7 +312,6 @@ blockquote {
 }
 
 .portfolio-item .item-inner {
-    background: #fff;
     padding: 0;
     margin: 0 20px 20px 0;
     position: relative;
@@ -1530,6 +1529,7 @@ img.author-box-image {
     background-size: contain;
 }
 
+
 .widget-title {
     font-size: 18px;
     text-transform: uppercase;
@@ -2161,7 +2161,6 @@ img.author-box-image {
 
 .portfolio-item h5 {
     background: #fff;
-    margin: 0 20px 0 0;
     padding: 20px 10px;
     font-weight: 400;
     font-size: 14px;
@@ -2291,5 +2290,11 @@ img.author-box-image {
     }
     #footer-wrapper {
         position: relative !important;
+    }
+    #about-us  .col-sm-3.text-center {
+    float:none;
+    }
+    #about-us  .col-sm-3.text-center img {
+    margin:0 auto 10px;
     }
 }
