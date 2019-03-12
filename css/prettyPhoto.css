@@ -121,9 +121,12 @@ div.facebook .pp_bottom .pp_right{background:url(../images/prettyPhoto/facebook/
 div.pp_pic_holder a:focus{outline:none}
 div.pp_overlay{background:#000;display:none;left:0;position:absolute;top:0;width:100%;z-index:9500}
 div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}
-.pp_content{height:100% !important;min-width:40px}
+.pp_content{min-width:40px}
 * html .pp_content{width:40px}
 .pp_content_container{position:relative;text-align:left;width:100%}
+.pp_content_container .pp_description a {    background: none;
+    border: 2px solid #E91E63;
+    color: #E91E63;     padding: 10px 16px;     text-transform: uppercase;}
 .pp_content_container .pp_left{padding-left:20px}
 .pp_content_container .pp_right{padding-right:20px}
 .pp_content_container .pp_details{float:left;margin:10px 0 2px}
