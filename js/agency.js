@@ -28,7 +28,7 @@
 
   // Collapse Navbar
   var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 600) {
+    if ($("#mainNav").offset().top > $("#About").offset().top) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
       $("#mainNav").removeClass("navbar-shrink");
@@ -69,9 +69,11 @@
            }, 300 * (i + 1));
         });
       }
+      setVisible();
+	  $(window).scroll(setVisible);
 
-	  $(window).scroll(function(){
-		  $.each($("section .slide-content").children().not(".is-visible"), function(index, item){
+	  function setVisible (){
+	  	$.each($("section .slide-content").children().not(".is-visible"), function(index, item){
 			var elementTop = $(item).offset().top;
 			var elementBottom = elementTop + $(item).outerHeight();
 
@@ -83,7 +85,7 @@
 				$(item).addClass("is-visible");
 			}
 		  });
-	  });
+	  };
 
   // 타임 라인
   var data = [{
@@ -103,7 +105,7 @@
       "career": "MOS Excel, PowerPoint, Word 최종합격",
       "description": ""
    }, {
-      "date": "2015.01.20 ~ 2015.04.08",
+      "date": "2015.01 ~ 2015.04",
       "career": "KF컴퓨터학원 일러스트레이터회사실무 교육 수료",
       "description": ""
    }, {
@@ -127,17 +129,17 @@
   $.each(data, function(index, item){
      $(".timeline")
         .append($(document.createElement("li")).addClass(index % 2 != 0 ? "timeline-inverted" : "")
-            .append($(document.createElement("div")).addClass("timeline-image")
+            .append($(document.createElement("div")).addClass("timeline-image slide-content")
                  .append($(document.createElement("img")).addClass("rounded-circle img-fluid").attr("src", "img/about/" + (index + 1)+".jpg")))
             .append($(document.createElement("div")).addClass("timeline-panel")
-                 .append($(document.createElement("div")).addClass("timeline-heading")
+                 .append($(document.createElement("div")).addClass("timeline-heading slide-content")
                     .append($(document.createElement("em")).text(item.date))
                     .append($(document.createElement("h4")).addClass("subheading").text(item.career)))
-                 .append($(document.createElement("div")).addClass("timeline-body")
+                 .append($(document.createElement("div")).addClass("timeline-body slide-content")
                     .append($(document.createElement("p")).addClass("text-muted").text(item.description)))));
   });
   $(".timeline")
      .append($(document.createElement("li")).addClass("timeline-inverted")
-         .append($(document.createElement("div")).addClass("timeline-image").html("<h4>Final<br>goal<br>Developer!</h4>")));
+         .append($(document.createElement("div")).addClass("timeline-image slide-content").html("<h4>Final<br>goal<br>Developer!</h4>")));
 
 })(jQuery); // End of use strict

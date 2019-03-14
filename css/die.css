@@ -80,3 +80,146 @@
                 .title_text_slide > span:nth-child(11){
                     animation-delay: 1.1s;
                 }
+
+
+#middle {
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+#middle::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    opacity: .3
+}
+
+#middle h2 {
+    font-size: 48px;
+    color: #ffffff;
+}
+
+#middle .skill {
+    margin-bottom: 60px;
+}
+
+.progress-wrap {
+    position: relative;
+    padding: 10px 35px;
+}
+
+.progress-wrap h3 {
+    color: #ffffff;
+    text-align: left;
+}
+
+.progress .color1,
+.progress .color1 .bar-width,
+.progress .color1 .bar-width::after {
+    background: #2d7da4;
+}
+
+.progress .color2,
+.progress .color2 .bar-width,
+.progress .color2 .bar-width::after {
+    background: #6aa42f;
+}
+
+.progress .color3,
+.progress .color3 .bar-width,
+.progress .color3 .bar-width::after {
+    background: #ffcc33;
+}
+
+.progress .color4,
+.progress .color4 .bar-width,
+.progress .color4 .bar-width::after {
+    background: #db3615;
+}
+
+.progress,
+.progress-bar {
+    height: 10px;
+    line-height: 10px;
+    background: #e6e6e6;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 5px;
+    overflow: visible;
+    text-align: right;
+}
+
+span.bar-width::after {
+    content: '';
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    bottom: -32.5px;
+    border-radius: 50%;
+    right: 5px;
+    border: 4px solid #fff;
+}
+
+.progress {
+    position: relative;
+}
+
+.progress .bar-width {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    top: -40px;
+    border-radius: 2px;
+    margin-left: -30px;
+}
+
+.progress .progress-bar .bar-width {
+    background-color: #fff;
+    color: #707070;
+}
+
+.progress span {
+    position: relative;
+}
+
+.progress .progress-bar span:before {
+    content: " ";
+    position: absolute;
+    width: auto;
+    height: auto;
+    border-width: 8px 5px;
+    border-style: solid;
+    bottom: -15px;
+    right: 8px;
+    border-top-color: #ffffff !important;
+    color: #222;
+}
+
+.progress .color1 span:before {
+    border-color: #2d7da4 transparent transparent transparent;
+}
+
+.progress .color2 span:before {
+    border-color: #6aa42f transparent transparent transparent;
+}
+
+.progress .color3 span:before {
+    border-color: #ffcc33 transparent transparent transparent;
+}
+
+.progress .color4 span:before {
+    border-color: #db3615 transparent transparent transparent;
+}
