@@ -28,7 +28,7 @@
 
   // Collapse Navbar
   var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
+    if ($("#mainNav").offset().top > 600) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
       $("#mainNav").removeClass("navbar-shrink");
@@ -46,5 +46,58 @@
   $('.portfolio-modal').on('hidden.bs.modal', function(e) {
     $('.navbar').removeClass('d-none');
   })
+  var data = [{
+   "date": "2008.02",
+   "career": "상일여자고등학교 졸업",
+   "description": ""
+   }, {
+      "date": "2011.02",
+      "career": "한양여자대학교 패션디자인과 졸업",
+      "description": ""
+   }, {
+      "date": "2012.03 ~ 2015.02",
+      "career": "가천대학교 글로벌캠퍼스 국어국문학과 3학년 편입 후 졸업",
+      "description": ""
+   }, {
+      "date": "2014.10.02",
+      "career": "MOS Excel, PowerPoint, Word 최종합격",
+      "description": ""
+   }, {
+      "date": "2015.01.20 ~ 2015.04.08",
+      "career": "KF컴퓨터학원 일러스트레이터회사실무 교육 수료",
+      "description": ""
+   }, {
+      "date": "2015.06.16 ~ 2015.09.09",
+      "career": "더조은컴퓨터아트학원 웹표준디자인(HTML/드림위버)교육 수료",
+      "description": ""
+   }, {
+      "date": "2016.01.04 ~ 2016.04.04",
+      "career": "에이전시 ㈜더웹스타일 퍼블리싱팀 소속",
+      "description": "제휴회사 페이지 코딩, 이벤트페이지 코딩, 웹접근성 인증마크 획득 프로젝트"
+   }, {
+      "date": "2016.05.04 ~ 2016.11.04",
+      "career": "(주)옐로트래블랩스 '우리펜션 개발팀' 소속",
+      "description": "우리펜션 사이트 리뉴얼, 사이트 관리, 이벤트페이지 코딩,어드민코딩"
+   }, {
+      "date": "2017.03.20 ~ 재직중",
+      "career": "기독교 방송 ㈜CBSi 'IT운영팀' 소속 ",
+      "description": "CBS,노컷뉴스 사이트 관리 및 리뉴얼, 이벤트성 페이지 코딩,CBS바이블 사이트 관리"
+   }];
+
+  $.each(data, function(index, item){
+     $(".timeline")
+        .append($(document.createElement("li")).addClass(index % 2 != 0 ? "timeline-inverted" : "")
+            .append($(document.createElement("div")).addClass("timeline-image")
+                 .append($(document.createElement("img")).addClass("rounded-circle img-fluid").attr("src", "img/about/" + (index + 1)+".jpg")))
+            .append($(document.createElement("div")).addClass("timeline-panel")
+                 .append($(document.createElement("div")).addClass("timeline-heading")
+                    .append($(document.createElement("em")).text(item.date))
+                    .append($(document.createElement("h4")).addClass("subheading").text(item.career)))
+                 .append($(document.createElement("div")).addClass("timeline-body")
+                    .append($(document.createElement("p")).addClass("text-muted").text(item.description)))));
+  });
+  $(".timeline")
+     .append($(document.createElement("li")).addClass("timeline-inverted")
+         .append($(document.createElement("div")).addClass("timeline-image").html("<h4>Final<br>goal<br>Developer!</h4>")));
 
 })(jQuery); // End of use strict

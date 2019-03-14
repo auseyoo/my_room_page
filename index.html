@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -26,27 +25,34 @@
 <!--   <link href="css/die.css" rel="stylesheet"> -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script type="text/javascript">
-		$(document).ready(function () { 'use strict';
+      $(document).ready(function () { 'use strict';
 
-		var slideBelements = $('.intro-heading'),
-			replay = $('button.replay');
+      var slide  = $('.slide');
 
-		animateSlideB();
+      animateSlide(slide.eq(0))
+      var count = 0;
+      setInterval(function(){
+         count++;
+         var item = slide.eq(count).fadeIn();
+         slide.not(item).fadeOut();
 
-		function animateSlideB() {
-		  slideBelements.each(function (i) {
-			  console.log(i)
-			  setTimeout(function () {
-				  slideBelements.eq(i).addClass('is-visible');
-			  }, 300 * (i + 1));
-		  });
-	   }
+         if (count == 3) {
+            count = -1;
+         }
+         slide.find(".slide-content").children().removeClass("is-visible");
+         animateSlide(slide.eq(count));
+      }, 5000);
 
-	   replay.on('click', function () {
-		 location.reload(true);
-	   });
-
-	});
+      function animateSlide(item){
+         var child = $(item).find(".slide-content").children();
+         child.each(function (i) {
+           setTimeout(function () {
+              console.log(child.eq(i))
+              child.eq(i).addClass('is-visible');
+           }, 300 * (i + 1));
+        });
+      }
+   });
   </script>
 </head>
 
@@ -84,28 +90,52 @@
   <!-- Header -->
   <header class="masthead">
     <div class="container">
-      <div class="intro-text slide slide-b">
-        <div class="intro-lead-in">Welcome To My room!</div>
-        <div class="slide-content">
-           <div class="intro-heading text-uppercase slide-b-child">rorkxdmsdlstodtk</div>
+    <div class="intro">
+        <div class="intro-text slide slide-a">
+          <div class="intro-lead-in">Welcome To My room!</div>
+          <div class="slide-content">
+            <div class="intro-heading text-uppercase slide-a-child">Hello!</div>
+          <!-- <P CLASS="TITLE_TEXT_SLIDE">
+            <SPAN CLASS="LETTER">U</SPAN>
+            <SPAN CLASS="LETTER">N</SPAN>
+            <SPAN CLASS="LETTER">I</SPAN>
+            <SPAN CLASS="LETTER">Q</SPAN>
+            <SPAN CLASS="LETTER">U</SPAN>
+            <SPAN CLASS="LETTER">E</SPAN></P> -->
+          <p class="scroll_text">scroll down</p>
         </div>
-        <!-- <P CLASS="TITLE_TEXT_SLIDE">
-          <SPAN CLASS="LETTER">U</SPAN>
-          <SPAN CLASS="LETTER">N</SPAN>
-          <SPAN CLASS="LETTER">I</SPAN>
-          <SPAN CLASS="LETTER">Q</SPAN>
-          <SPAN CLASS="LETTER">U</SPAN>
-          <SPAN CLASS="LETTER">E</SPAN></P> -->
-        <p class="scroll_text">scroll down</p>
+        </div>
+        <div class="intro-text slide slide-b">
+          <div class="intro-lead-in">Welcome To My room!</div>
+          <div class="slide-content">
+          <div class="intro-heading text-uppercase slide-b-child">Web publisher<br>♥<br>Yoon Mi Yeon</div>
+          </div>
+          <p class="scroll_text">scroll down</p>
+        </div>
+        <div class="intro-text slide slide-c">
+            <div class="intro-lead-in">Welcome To My room!</div>
+            <div class="slide-content">
+                <div class="intro-heading text-uppercase slide-c-child">Nice to meet you!</div>
+                 <div class="intro-heading text-uppercase slide-c-child">*-*</div>
+            </div>
+            <p class="scroll_text">scroll down</p>
+        </div>
+        <div class="intro-text slide slide-d">
+          <div class="intro-lead-in">Welcome To My room!</div>
+          <div class="slide-content">
+             <div class="intro-heading text-uppercase slide-d-child">♥</div>
+          </div>
+          <p class="scroll_text">scroll down</p>
+        </div>
       </div>
-    </div>
+      </div>
   </header>
 
   <!-- About -->
   <section id="About">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
+      <div class="row slide">
+        <div class="col-lg-12 text-center slide-content">
           <h2 class="section-heading text-uppercase">Hello</h2>
           <h3 class="section-subheading text-muted">안녕하세요 윤미연니다. 저의 포트폴리오 사이트에 방문해 주셔서 감사합니다.</h3>
         </div>
@@ -232,69 +262,6 @@
       <div class="row">
         <div class="col-lg-12">
           <ul class="timeline">
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>2009-2011</h4>
-                  <h4 class="subheading">Our Humble Beginnings</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>March 2011</h4>
-                  <h4 class="subheading">An Agency is Born</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>December 2012</h4>
-                  <h4 class="subheading">Transition to Full Service</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>July 2014</h4>
-                  <h4 class="subheading">Phase Two Expansion</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>Final
-                  <br>goal
-                  <br>Developer!</h4>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -713,7 +680,7 @@
   <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
+  <script src="js/agency.js"></script>
 
 </body>
 
