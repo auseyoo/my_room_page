@@ -73,7 +73,7 @@
 	  $(window).scroll(setVisible);
 
 	  function setVisible (){
-	  	$.each($("section .slide-content").children().not(".is-visible"), function(index, item){
+	  	$.each($("section .slide-content").children(), function(index, item){
 			var elementTop = $(item).offset().top;
 			var elementBottom = elementTop + $(item).outerHeight();
 
@@ -84,45 +84,57 @@
 			{
 				$(item).addClass("is-visible");
 			}
+
+              if (elementTop > viewportBottom || viewportTop > elementBottom)
+              {
+                $(item).removeClass("is-visible");
+              }
 		  });
 	  };
 
+    $(".progress-bar").each(function(index, item){
+
+    $(item).animate({
+       'width' : $(item).data("length") + '%'
+     }, 100).find("span").text($(item).data("length") + '%');
+  })
+
   // 타임 라인
-  var data = [{
-   "date": "2008.02",
+ var data = [{
+   "date": "2008",
    "career": "상일여자고등학교 졸업",
    "description": ""
    }, {
-      "date": "2011.02",
-      "career": "한양여자대학교 패션디자인과 졸업",
-      "description": ""
+      "date": "2009 ~ 2011",
+      "career": "한양여자대학교",
+      "description": "패션디자인과 졸업"
    }, {
-      "date": "2012.03 ~ 2015.02",
-      "career": "가천대학교 글로벌캠퍼스 국어국문학과 3학년 편입 후 졸업",
-      "description": ""
+      "date": "2012 ~ 2015",
+      "career": "가천대학교",
+      "description": "국어국문학과 편입 후 졸업"
    }, {
       "date": "2014.10.02",
       "career": "MOS Excel, PowerPoint, Word 최종합격",
       "description": ""
    }, {
       "date": "2015.01 ~ 2015.04",
-      "career": "KF컴퓨터학원 일러스트레이터회사실무 교육 수료",
-      "description": ""
+      "career": "KF컴퓨터학원",
+      "description": "일러스트레이터회사실무 교육 수료"
    }, {
       "date": "2015.06.16 ~ 2015.09.09",
-      "career": "더조은컴퓨터아트학원 웹표준디자인(HTML/드림위버)교육 수료",
-      "description": ""
+      "career": "더조은컴퓨터아트학원",
+      "description": "웹표준디자인(HTML/드림위버)교육 수료"
    }, {
       "date": "2016.01.04 ~ 2016.04.04",
-      "career": "에이전시 ㈜더웹스타일 퍼블리싱팀 소속",
+      "career": "㈜더웹스타일",
       "description": "제휴회사 페이지 코딩, 이벤트페이지 코딩, 웹접근성 인증마크 획득 프로젝트"
    }, {
       "date": "2016.05.04 ~ 2016.11.04",
-      "career": "(주)옐로트래블랩스 '우리펜션 개발팀' 소속",
+      "career": "(주)옐로트래블랩스",
       "description": "우리펜션 사이트 리뉴얼, 사이트 관리, 이벤트페이지 코딩,어드민코딩"
    }, {
       "date": "2017.03.20 ~ 재직중",
-      "career": "기독교 방송 ㈜CBSi 'IT운영팀' 소속 ",
+      "career": "㈜CBSi",
       "description": "CBS,노컷뉴스 사이트 관리 및 리뉴얼, 이벤트성 페이지 코딩,CBS바이블 사이트 관리"
    }];
 

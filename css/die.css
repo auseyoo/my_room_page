@@ -183,7 +183,6 @@ span.bar-width::after {
     font-weight: 700;
     top: -40px;
     border-radius: 2px;
-    margin-left: -30px;
 }
 
 .progress .progress-bar .bar-width {
