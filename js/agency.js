@@ -46,6 +46,46 @@
   $('.portfolio-modal').on('hidden.bs.modal', function(e) {
     $('.navbar').removeClass('d-none');
   })
+
+	var slide  = $('.intro .slide');
+      animateSlide(slide.eq(0))
+      var count = 0;
+      setInterval(function(){
+         var item = slide.eq(++count).fadeIn();
+         slide.not(item).fadeOut();
+
+         slide.find(".slide-content").children().removeClass("is-visible");
+         animateSlide(slide.eq(count));
+		 if (count == 3) {
+            count = -1;
+         }
+      }, 5000);
+
+      function animateSlide(item){
+         var child = $(item).find(".slide-content").children();
+         child.each(function (i) {
+           setTimeout(function () {
+              child.eq(i).addClass('is-visible');
+           }, 300 * (i + 1));
+        });
+      }
+
+	  $(window).scroll(function(){
+		  $.each($("section .slide-content").children().not(".is-visible"), function(index, item){
+			var elementTop = $(item).offset().top;
+			var elementBottom = elementTop + $(item).outerHeight();
+
+			var viewportTop = $(window).scrollTop();
+			var viewportBottom = viewportTop + $(window).height();
+
+			if (elementTop < viewportBottom)
+			{
+				$(item).addClass("is-visible");
+			}
+		  });
+	  });
+
+  // 타임 라인
   var data = [{
    "date": "2008.02",
    "career": "상일여자고등학교 졸업",

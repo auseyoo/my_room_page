@@ -27,31 +27,7 @@
   <script type="text/javascript">
       $(document).ready(function () { 'use strict';
 
-      var slide  = $('.slide');
-
-      animateSlide(slide.eq(0))
-      var count = 0;
-      setInterval(function(){
-         count++;
-         var item = slide.eq(count).fadeIn();
-         slide.not(item).fadeOut();
-
-         if (count == 3) {
-            count = -1;
-         }
-         slide.find(".slide-content").children().removeClass("is-visible");
-         animateSlide(slide.eq(count));
-      }, 5000);
-
-      function animateSlide(item){
-         var child = $(item).find(".slide-content").children();
-         child.each(function (i) {
-           setTimeout(function () {
-              console.log(child.eq(i))
-              child.eq(i).addClass('is-visible');
-           }, 300 * (i + 1));
-        });
-      }
+      
    });
   </script>
 </head>
@@ -136,14 +112,14 @@
   <!-- About -->
   <section id="About">
     <div class="container">
-      <div class="row slide">
+      <div class="row">
         <div class="col-lg-12 text-center slide-content">
           <h2 class="section-heading text-uppercase">Hello</h2>
           <h3 class="section-subheading text-muted">안녕하세요 윤미연니다. 저의 포트폴리오 사이트에 방문해 주셔서 감사합니다.</h3>
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-12">
+        <div class="col-md-12 slide-content">
           <span class="fa-stack fa-4x">
             <img src="img/about/01.jpg" class="fa-stack-1x">
           </span>
@@ -158,13 +134,13 @@
   <section class="bg-light" id="portfolio">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center slide-content">
           <h2 class="section-heading text-uppercase">Portfolio</h2>
           <h3 class="section-subheading text-muted"></h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item slide-content">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -173,12 +149,12 @@
             </div>
             <img class="img-fluid" src="img/portfolio/01-thumbnail.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="portfolio-caption slide-content">
             <h4>노컷뉴스 PC 리뉴얼</h4>
             <p class="text-muted">Illustration</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item slide-content">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -187,12 +163,12 @@
             </div>
             <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="portfolio-caption slide-content">
             <h4>Explore</h4>
             <p class="text-muted">Graphic Design</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item slide-content">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -201,12 +177,12 @@
             </div>
             <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="portfolio-caption slide-content">
             <h4>Finish</h4>
             <p class="text-muted">Identity</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item slide-content">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -215,12 +191,12 @@
             </div>
             <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="portfolio-caption slide-content">
             <h4>Lines</h4>
             <p class="text-muted">Branding</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item slide-content">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -229,12 +205,12 @@
             </div>
             <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="portfolio-caption slide-content">
             <h4>Southwest</h4>
             <p class="text-muted">Website Design</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item slide-content">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -243,7 +219,7 @@
             </div>
             <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="portfolio-caption slide-content">
             <h4>Window</h4>
             <p class="text-muted">Photography</p>
           </div>
@@ -256,14 +232,14 @@
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center slide-content">
           <h2 class="section-heading text-uppercase">About</h2>
           <h3 class="section-subheading text-muted">저를 소개합니다.</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="timeline">
+      <div class="row slide-content">
+        <div class="col-lg-12 slide-content">
+          <ul class="timeline slide-content">
           </ul>
         </div>
       </div>
@@ -274,14 +250,14 @@
   <section class="bg-light" id="team">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center slide-content">
           <h2 class="section-heading text-uppercase">Skill</h2>
-          <h3 class="section-subheading text-muted">제가 보유하고 있는 기술 및 능력입니다.니다.니다.니다.니다.니다.니다.</h3>
+          <h3 class="section-subheading text-muted">제가 보유하고 있는 기술 및 능력입니다.</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
-          <div class="team-member">
+          <div class="team-member slide-content">
             <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
             <h4>Kay Garland</h4>
             <p class="text-muted">Lead Designer</p>
@@ -305,7 +281,7 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="team-member">
+          <div class="team-member slide-content">
             <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
             <h4>Larry Parker</h4>
             <p class="text-muted">Lead Marketer</p>
@@ -329,7 +305,7 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="team-member">
+          <div class="team-member slide-content">
             <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
             <h4>Diana Pertersen</h4>
             <p class="text-muted">Lead Developer</p>
@@ -354,7 +330,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
+        <div class="col-lg-8 mx-auto text-center slide-content">
           <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
         </div>
       </div>
@@ -393,7 +369,7 @@
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center slide-content">
           <h2 class="section-heading text-uppercase">Contact</h2>
           <h3 class="section-subheading text-muted">작업 준비 완료됐습니다. 편하실 때 연락 주세요!</h3>
         </div>
