@@ -115,6 +115,7 @@
     position: relative;
     padding: 10px 35px;
 }
+.progress-wrap *{ opacity: 1 !important;}
 
 .progress-wrap h3 {
     color: #ffffff;
@@ -159,8 +160,8 @@
 
 span.bar-width::after {
     content: '';
-    height: 16px;
-    width: 16px;
+    height: 25px;
+    width: 25px;
     position: absolute;
     bottom: -32.5px;
     border-radius: 50%;
@@ -174,19 +175,24 @@ span.bar-width::after {
 
 .progress .bar-width {
     position: absolute;
-    width: 40px;
     height: 20px;
+	width:12px;
     line-height: 20px;
     text-align: center;
     font-size: 12px;
     font-weight: 700;
-    top: -40px;
+    top: -35px;
+    left: 0;
     border-radius: 2px;
 }
 
 .progress .progress-bar .bar-width {
     background-color: #fff;
     color: #707070;
+	 transition: none;
+    -webkit-transform: none;
+    transform: none;
+	opacity:1;
 }
 
 .progress span {
