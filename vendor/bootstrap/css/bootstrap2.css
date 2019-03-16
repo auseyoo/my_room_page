@@ -3191,7 +3191,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 1rem;
+    padding:.5rem 1rem;
 }
 .navbar>.container, .navbar>.container-fluid {
     display: -ms-flexbox;

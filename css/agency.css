@@ -3,8 +3,7 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */body {
-    overflow-x: hidden;
-    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
+    overflow-x: hidden;}
 p {
     line-height: 1.75;
 }
@@ -90,7 +89,7 @@ img::-moz-selection {
     top: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: #fff;
+    color: #828282;
     border: 0;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 #mainNav.navbar-shrink.navbar {
@@ -388,6 +387,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     background-color: #fff;
     position: relative;
     text-align: left;
+    border-radius:5px;
 }
 #portfolio .portfolio-item .portfolio-caption:after {
     bottom:  100%;
@@ -435,6 +435,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     #portfolio .portfolio-item {
     margin: 0 0 30px;
 }
+
 }.portfolio-modal {
     padding-right: 0!important;
 }
@@ -444,7 +445,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     max-width: 100vw;
 }
 .portfolio-modal .modal-content {
-    padding: 100px 0;
+    padding: 60px 0;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -460,6 +461,14 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 .portfolio-modal .modal-content p {
     margin-bottom: 30px;
 }
+.portfolio-modal .modal-content p.info {
+	padding: 1rem;
+	text-align:center;
+	letter-spacing: -1px;
+    font-weight: 500;
+    color: rgb(126, 135, 143);
+    line-height: 1.5;
+}
 .portfolio-modal .modal-content p.item-intro {
     font-size: 16px;
     font-style: italic;
@@ -471,6 +480,10 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 }
 .portfolio-modal .modal-content ul.list-inline strong {
     margin-right: 5px;
+	text-transform: uppercase!important;
+}
+.portfolio-modal .list-inline li.tech ul li{
+	list-style:none;
 }
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
