@@ -95,7 +95,7 @@ img::-moz-selection {
 }
 #mainNav .navbar-brand {
     display: none;
-     color: #fed136;
+     color: #ff5d81;
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 #mainNav.navbar-shrink .navbar-brand {
     display: flex;
@@ -373,11 +373,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     opacity: 0;
     background: rgba(254,  54,  119,  0.9);
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover img {
-    
-
-	}
-#portfolio .portfolio-item .portfolio-link .portfolio-hover: hover {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
@@ -699,6 +695,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 }@media (min-width:1200px) {
     .timeline>li {
     min-height: 170px;
+	}
 }
 @media (max-width:576px){
 	header.masthead .intro-text .intro-heading {
@@ -719,18 +716,21 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 .timeline>li.timeline-inverted>.timeline-panel {
     padding: 0 100px 20px 20px;
 }
-
+.timeline>li .slide-content * {
+	transition: all 1s cubic-bezier(0.25, 0.25, 0.23, 1.405);
+     -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
 }
-.timeline>li .slide-content .is-visible, .timeline>li .slide-content {
-        -webkit-transform:  translateX(0);
-    
-    transform:  translateX(0);
+.timeline>li .slide-content .is-visible {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity:1;
 }
-
 .timeline>li.timeline-inverted .slide-content .is-visible {
-         -webkit-transform:  translateY(0);
-    
-    transform:  translateY(0);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity:1;
 }
 
 
@@ -813,6 +813,7 @@ footer ul.quicklinks {
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 ul.social-buttons {
     margin-bottom: 0;
+    text-align:center;
 }
 ul.social-buttons li a {
     font-size: 20px;

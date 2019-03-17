@@ -168,13 +168,9 @@ setProgressbar();
       "career": "가천대학교",
       "description": "국어국문학과 편입 후 졸업"
    }, {
-      "date": "2014.10.02",
-      "career": "MOS Excel, PowerPoint, Word 최종합격",
-      "description": ""
-   }, {
       "date": "2015.01 ~ 2015.04",
       "career": "KF컴퓨터학원",
-      "description": "일러스트레이터회사실무 교육 수료"
+      "description": "포토샵<br/>일러스트레이터회사실무 교육 수료"
    }, {
       "date": "2015.06.16 ~ 2015.09.09",
       "career": "더조은컴퓨터아트학원",
@@ -203,7 +199,7 @@ setProgressbar();
                     .append($(document.createElement("em")).text(item.date))
                     .append($(document.createElement("h4")).addClass("subheading").text(item.career)))
                  .append($(document.createElement("div")).addClass("timeline-body slide-content")
-                    .append($(document.createElement("p")).addClass("text-muted").text(item.description)))));
+                    .append($(document.createElement("p")).addClass("text-muted").html(item.description)))));
   });
   $(".timeline")
      .append($(document.createElement("li")).addClass("timeline-inverted")

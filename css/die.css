@@ -159,13 +159,13 @@
 .progress .color1,
 .progress .color1 .bar-width,
 .progress .color1 .bar-width::after {
-    background: #2d7da4;
+    background: #db3615;
 }
 
 .progress .color2,
 .progress .color2 .bar-width,
 .progress .color2 .bar-width::after {
-    background: #6aa42f;
+    background: #2d7da4;
 }
 
 .progress .color3,
@@ -177,7 +177,7 @@
 .progress .color4,
 .progress .color4 .bar-width,
 .progress .color4 .bar-width::after {
-    background: #db3615;
+    background: #000;
 }
 
 .progress,
@@ -330,3 +330,4 @@ a.close-link{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+
