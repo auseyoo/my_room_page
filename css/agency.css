@@ -121,7 +121,7 @@ img::-moz-selection {
     color: #fec503;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 900;
     letter-spacing: 1px;
     color: #828282;
@@ -211,7 +211,15 @@ header.masthead .intro-text .intro-heading {
     transition: all 1s;
     color:#828282;
 }
-.intro .slide.slide-a .intro-lead-in.slide-a-child{font-size:30px;}
+.intro .slide.slide-a .intro-lead-in.slide-a-child{
+	    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.intro .slide.slide-a .intro-heading-in.slide-a-child{
+	font-size:2rem;
+}
 .intro .slide.slide-a .slide-a-child.is-visible {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -247,6 +255,10 @@ header.masthead .intro-text .intro-heading {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
+}
+.intro .slide.slide-b .intro-heading-in.slide-b-child {
+	font-size: 2rem;
+    line-height: 1.5;
 }
 .intro .slide.slide-c {
     background: url(../images/bg/paint-268231_1920.jpg);
@@ -289,7 +301,7 @@ header.masthead .intro-text .intro-heading {
     padding-bottom: 200px;
 }
 header.masthead .intro-text .intro-heading {
-    font-size: 75px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 75px;
     margin-bottom: 50px;
@@ -682,6 +694,11 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 }@media (min-width:1200px) {
     .timeline>li {
     min-height: 170px;
+}
+@media (max-width:576px){
+	header.masthead .intro-text .intro-heading {
+		font-size:2rem;
+	}
 }
 .timeline>li .timeline-panel {
     padding: 0 20px 20px 100px;

@@ -3224,7 +3224,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     padding-left: 0;
     margin-bottom: 0;
     position:absolute;
-    top:26px;
+    top:40px;
     right:0;
     list-style: none;
     -webkit-transform:  translate(-50%,  -50%);
@@ -3315,7 +3315,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .navbar-expand-sm .navbar-toggler {
     display: none;
 }
-}@media (max-width:767.98px) {
+}
+@media (max-width:767.98px) {
     .navbar-expand-md>.container, .navbar-expand-md>.container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -3329,6 +3330,17 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     text-align:center;
     background:#fff;
     color:#222;
+}
+.navbar-collapse.show a.close-link {display:block;}
+.navbar-nav {
+	top:50%;
+	right:auto;
+	left: 50%;
+}
+.navbar-nav li{
+	display: block;
+    margin-right: 0;
+    margin-bottom: 2rem;
 }
 #mainNav .navbar-toggler.navbar-toggler-right{display:flex;}
 }
@@ -3718,6 +3730,11 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 }.card-columns .card {
     margin-bottom: .75rem;
+}
+@media (max-width:576px){
+	header.masthead .intro-text .intro-heading {
+		font-size:2rem;
+	}
 }
 @media (min-width:576px) {
     .card-columns {

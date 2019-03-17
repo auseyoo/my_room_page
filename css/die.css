@@ -325,9 +325,8 @@ a.close-link{
     width: 100%;
     padding: 15px 0;
     color: #fff;
-    background: #00a8ff;
+    background: #ff5d81;
     text-decoration: none;
-    color: #00a8ff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }

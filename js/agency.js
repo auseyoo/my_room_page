@@ -56,10 +56,10 @@
 
          slide.find(".slide-content").children().removeClass("is-visible");
          animateSlide(slide.eq(count));
-		 if (count == 3) {
+		 if (count == 1) {
             count = -1;
          }
-      }, 5000);
+      }, 100000000);
 
       function animateSlide(item){
          var child = $(item).find(".slide-content").children();
