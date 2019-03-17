@@ -19,11 +19,6 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
-.slide-content *  {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-}
 
 section .slide-content h2.is-visible, section .slide-content h3.is-visible,  section .slide-content h4.is-visible, section .slide-content p.is-visible, section .slide-content span.is-visible, section .slide-content span.is-visible img  {
     -webkit-transform: translateY(0);
@@ -128,7 +123,7 @@ img::-moz-selection {
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #e90083;
+    color: #ff5d81;
 }
 @media (min-width:992px) {
     #mainNav {
@@ -145,7 +140,6 @@ img::-moz-selection {
     transition: all .3s;
 }
 #mainNav.navbar-shrink {
-    padding-top: 5px;
     padding-bottom: 5px;
 }
 #mainNav.navbar-shrink .navbar-brand {
@@ -171,17 +165,19 @@ header.masthead .intro-text {
     padding-bottom: 100px;
 }
 header.masthead .intro-text .intro-lead-in {
-    font-size: 20px;
-    color: #fff;
-    line-height: 22px;
-    margin-bottom: 25px;
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #828282;
 }
 header.masthead .intro-text .intro-heading {
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
-    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+}
 .intro .slide {
     width: 100%;
     height: 100%;
@@ -212,7 +208,7 @@ header.masthead .intro-text .intro-heading {
     color:#828282;
 }
 .intro .slide.slide-a .intro-lead-in.slide-a-child{
-	    font-size: 40px;
+	font-size: 40px;
     margin-bottom: 15px;
     font-weight: 500;
     line-height: 1.5;
@@ -228,11 +224,18 @@ header.masthead .intro-text .intro-heading {
 .intro .slide.slide-a p {
     font-size: 25px;
 }
+/*Slide-B*/
+.intro .slide.slide-b .intro-lead-in.slide-a-child{
+	font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
 .intro .slide.slide-b {
-    background:  rgba(28,  36,  65,  0.93);
-    background: url(../img/header.jpg);
-     background-size: cover;
-     z-index: 300;
+    background: rgba(28,  36,  65,  0.93);
+    background: url(../img/bg/bg5.jpg);
+    background-size: cover;
+    z-index: 300;
 }
 .intro .slide.slide-b h2 {
     -webkit-transform: translateX(50px);
@@ -260,8 +263,9 @@ header.masthead .intro-text .intro-heading {
 	font-size: 2rem;
     line-height: 1.5;
 }
+/*Slide-C*/
 .intro .slide.slide-c {
-    background: url(../images/bg/paint-268231_1920.jpg);
+    background: url(../img/bg/bg7.jpg);
      background-size:  cover;
     z-index: 200;
 }
@@ -270,6 +274,7 @@ header.masthead .intro-text .intro-heading {
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
     opacity: 0;
+    color:#828282;
 }
 .intro .slide.slide-c .slide-c-child.is-visible {
     -webkit-transform: scale(1);
@@ -458,7 +463,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 }
 .portfolio-modal .modal-content {
     padding: 60px 0;
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 0 auto;
     text-align: center;
     border-radius: 15px;
@@ -598,7 +603,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     color: #fff;
     border: 7px solid #e9ecef;
     border-radius: 100%;
-    background-color: rgba(254,  54,  119,  0.9);
+    background-color: #ff5d81;
 }
 .timeline>li .timeline-image h4 {
     font-size: 10px;

@@ -56,10 +56,10 @@
 
          slide.find(".slide-content").children().removeClass("is-visible");
          animateSlide(slide.eq(count));
-		 if (count == 1) {
+		 if (count == 2) {
             count = -1;
          }
-      }, 100000000);
+      }, 4000);
 
       function animateSlide(item){
          var child = $(item).find(".slide-content").children();
@@ -98,7 +98,62 @@
        'width' : $(item).data("length") + '%'
      }, 100).find("span").text($(item).data("length") + '%');
   })
+$(window).scroll(setProgressbar);
+setProgressbar();
+    function setProgressbar(){
+      $(".progress-bar").each(function(index, item){
 
+        var elementTop = $(item).offset().top;
+        var elementBottom = elementTop + $(item).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        var per = $(item).data("length");
+        var visible = false;
+
+        // 안에 있을때
+        if (elementTop < viewportBottom && elementBottom > viewportTop)
+        {
+          if ($(item).hasClass("is-visible")){
+            return;
+          }
+          $(item).addClass("is-visible");
+        }
+        // 밖에 있을때
+        if (elementTop > viewportBottom || viewportTop > elementBottom)
+        {
+          console.log(1)
+          if (!$(item).hasClass("is-visible")){
+            return;
+          }
+          per = 0;
+          $(item).removeClass("is-visible");
+        }
+
+        
+        $(item).animate({
+           'width' : per + '%'
+         }, 50);
+         
+         $(item).find("span").animate({
+           'left' : per + '%'
+         });
+
+         /*
+         $(item).find("span").animate({
+           Counter: $(item).data("length"),
+           'left' : $(item).data("length") + '%'
+         }, {
+          duration: 300,
+          easing: 'swing',
+          step: function (now) {
+            $(item).find("span").text(Math.ceil(now) + "%");
+          }
+         });*/
+
+        })
+    }
   // 타임 라인
  var data = [{
    "date": "2008",

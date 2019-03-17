@@ -3331,6 +3331,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     background:#fff;
     color:#222;
 }
+.navbar-collapse.show {display}
 .navbar-collapse.show a.close-link {display:block;}
 .navbar-nav {
 	top:50%;
@@ -3509,7 +3510,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     color: rgba(0, 0, 0, .9);
 }
 .navbar-dark .navbar-brand {
-    color: #fff;
+    color: #ff5d81;
 }
 .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
     color: #fff;
@@ -3731,11 +3732,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }.card-columns .card {
     margin-bottom: .75rem;
 }
-@media (max-width:576px){
-	header.masthead .intro-text .intro-heading {
-		font-size:2rem;
-	}
-}
+
 @media (min-width:576px) {
     .card-columns {
     -webkit-column-count: 3;
