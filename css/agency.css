@@ -94,8 +94,7 @@ img::-moz-selection {
     color: #6c757d;
 }
 #mainNav .navbar-brand {
-    display: none;
-     color: #ff5d81;
+    color: #ff5d81;
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 #mainNav.navbar-shrink .navbar-brand {
     display: flex;
@@ -265,7 +264,7 @@ header.masthead .intro-text .intro-heading {
 }
 /*Slide-C*/
 .intro .slide.slide-c {
-    background: url(../img/bg/bg7.jpg);
+    background: url(../img/bg/bg11.jpg);
      background-size:  cover;
     z-index: 200;
 }
@@ -447,9 +446,9 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 @media (min-width:767px) {
     #portfolio .portfolio-item {
     margin: 0 0 30px;
+	}
 }
-
-}.portfolio-modal {
+.portfolio-modal {
     padding-right: 0!important;
 }
 .portfolio-modal .modal-dialog {
@@ -466,10 +465,10 @@ header.masthead .slide-a .intro-heading.slide-a-child {
      overflow: hidden;
 }
 .portfolio-modal .modal-content h2 {
-    font-size: 3em;
+    font-size: 1.4em;
     margin-bottom: 15px;
     text-align: left;
-     letter-spacing: -1px;
+    letter-spacing: -1px;
 }
 .portfolio-modal .modal-content p {
     margin-bottom: 30px;
@@ -548,9 +547,9 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 40px;
     width: 2px;
-    margin-left: -1.5px;
+    margin-left: 0;
     content: '';
     background-color: #e9ecef;
 }
@@ -639,13 +638,15 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     text-transform: none;
      font-weight: 500;
     font-size:  1rem;
+    margin: 10px 0 3px;
+
 }
 .timeline .timeline-body>p, .timeline .timeline-body>ul {
     margin-bottom: 0;
 }
 @media (min-width:768px) {
-    .timeline: before {
-    left: 50%}
+.timeline:before {
+    left: 50%; margin-left:1.5px;}
 .timeline>li {
     min-height: 100px;
     margin-bottom: 100px;
@@ -672,9 +673,11 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     padding: 0 30px 20px 20px;
     text-align: left;
 }
-}@media (min-width:992px) {
-    .timeline>li {
-    min-height: 150px;
+
+}
+@media (min-width:992px) {
+.timeline>li {
+min-height: 150px;
 }
 .timeline>li .timeline-panel {
     padding: 0 20px 20px;
@@ -692,7 +695,9 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 .timeline>li.timeline-inverted>.timeline-panel {
     padding: 0 20px 20px;
 }
-}@media (min-width:1200px) {
+.portfolio-modal .modal-content h2 {font-size:2em;}
+}
+@media (min-width:1200px) {
     .timeline>li {
     min-height: 170px;
 	}
@@ -705,36 +710,18 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 .timeline>li .timeline-panel {
     padding: 0 20px 20px 100px;
 }
-.timeline>li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
-}
-.timeline>li .timeline-image h4 {
-    margin-top: 40px;
-}
-.timeline>li.timeline-inverted>.timeline-panel {
-    padding: 0 100px 20px 20px;
-}
-.timeline>li .slide-content * {
-	transition: all 1s cubic-bezier(0.25, 0.25, 0.23, 1.405);
+.timeline>li .timeline-panel .slide-content * {
+    transition: all 1s cubic-bezier(0.25, 0.25, 0.23, 1.405);
      -webkit-transform: scale(0.5);
     transform: scale(0.5);
     opacity: 0;
 }
-.timeline>li .slide-content .is-visible {
+.timeline>li .timeline-panel .slide-content .is-visible {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity:1;
 }
-.timeline>li.timeline-inverted .slide-content .is-visible {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity:1;
-}
-
-
-
+.timeline .text-muted {font-size:0.8rem;}
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -830,8 +817,9 @@ ul.social-buttons li a {
     text-align:center;
 }
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #fed136;
+    background-color: #ff5d81;
 }
 section#history {
 	background-color: #f0f2f7;
 }
+#about .row text-center

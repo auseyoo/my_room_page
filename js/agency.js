@@ -37,7 +37,12 @@
   // Collapse now if page is not at top
   navbarCollapse();
   // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+  // 스크롤 발생시 이벤트 처리 함수
+  $(window).scroll(function(){
+    navbarCollapse();
+    setProgressbar();
+    setVisible();
+  });
 
   // Hide navbar when modals trigger
   $('.portfolio-modal').on('show.bs.modal', function(e) {
@@ -47,115 +52,109 @@
     $('.navbar').removeClass('d-none');
   })
 
-	var slide  = $('.intro .slide');
-      animateSlide(slide.eq(0))
-      var count = 0;
-      setInterval(function(){
-         var item = slide.eq(++count).fadeIn();
-         slide.not(item).fadeOut();
+  // 메뉴바 닫기 버튼 클릭 이벤트
+  $(".close-link").click(function(){
+    $(".navbar-collapse").removeClass("show");
+  });
 
-         slide.find(".slide-content").children().removeClass("is-visible");
-         animateSlide(slide.eq(count));
-		 if (count == 2) {
-            count = -1;
-         }
-      }, 4000);
+setHeaderSliderInterval();
+setProgressbar();
+setVisible();
+renderTimeline();
 
-      function animateSlide(item){
-         var child = $(item).find(".slide-content").children();
-         child.each(function (i) {
-           setTimeout(function () {
-              child.eq(i).addClass('is-visible');
-           }, 300 * (i + 1));
-        });
+// 메인 header interval 함수
+function setHeaderSliderInterval(){
+  var slide  = $('.intro .slide');
+  var count = 0;
+  setHeaderSlider(slide.eq(0));
+  setInterval(function(){
+    var item = slide.eq(++count).fadeIn();
+    slide.not(item).fadeOut();
+
+    slide.find(".slide-content").children().removeClass("is-visible");
+    setHeaderSlider(slide.eq(count));
+    if (count == 2) count = -1;
+  }, 4000);
+}
+
+// 메인 header is-visible 추가 함수
+function setHeaderSlider(item){
+  var child = $(item).find(".slide-content").children();
+  child.each(function (i) {
+    setTimeout(function () {
+      child.eq(i).addClass('is-visible');
+    }, 300 * (i + 1));
+  });
+}
+
+// slide-content 내에 자식 element 들의 is-visible class 추가
+function setVisible (){
+  $.each($("section .slide-content").children(), function(index, item){
+    var position = getElementPosition(item);
+
+    if (position.in) $(item).addClass("is-visible");
+    if (position.out) $(item).removeClass("is-visible");
+  });
+};
+
+// skill-bar 스크롤 위치 변경에 따른 값 셋팅
+function setProgressbar(){
+  $(".progress-bar").each(function(index, item) {
+
+    var position = getElementPosition(item);
+    var per = $(item).data("length");
+
+    // 안에 있을때
+    if (position.in)
+    {
+      if ($(item).hasClass("visible")){
+        return;
       }
-      setVisible();
-	  $(window).scroll(setVisible);
-
-	  function setVisible (){
-	  	$.each($("section .slide-content").children(), function(index, item){
-			var elementTop = $(item).offset().top;
-			var elementBottom = elementTop + $(item).outerHeight();
-
-			var viewportTop = $(window).scrollTop();
-			var viewportBottom = viewportTop + $(window).height();
-
-			if (elementTop < viewportBottom)
-			{
-				$(item).addClass("is-visible");
-			}
-
-              if (elementTop > viewportBottom || viewportTop > elementBottom)
-              {
-                $(item).removeClass("is-visible");
-              }
-		  });
-	  };
-
-    $(".progress-bar").each(function(index, item){
+      $(item).addClass("visible");
+    }
+    // 밖에 있을때
+    if (position.out)
+    {
+      if (!$(item).hasClass("visible")){
+        return;
+      }
+      per = 0;
+      $(item).removeClass("visible");
+    }
 
     $(item).animate({
-       'width' : $(item).data("length") + '%'
-     }, 100).find("span").text($(item).data("length") + '%');
-  })
-$(window).scroll(setProgressbar);
-setProgressbar();
-    function setProgressbar(){
-      $(".progress-bar").each(function(index, item){
+       'width' : per + '%'
+     }, 50).find("span").animate({
+       'left' : per + '%'
+     });
+  });
+}
 
-        var elementTop = $(item).offset().top;
-        var elementBottom = elementTop + $(item).outerHeight();
+// 특정 엘리먼트가 화면내에 존재 여부를 체크 하는 함수
+function getElementPosition(item){
+  var rst = {
+    in : false,
+    out : false
+  };
 
-        var viewportTop = $(window).scrollTop();
-        var viewportBottom = viewportTop + $(window).height();
+  var elementTop = $(item).offset().top;
+  var elementBottom = elementTop + $(item).outerHeight();
 
-        var per = $(item).data("length");
-        var visible = false;
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
 
-        // 안에 있을때
-        if (elementTop < viewportBottom && elementBottom > viewportTop)
-        {
-          if ($(item).hasClass("is-visible")){
-            return;
-          }
-          $(item).addClass("is-visible");
-        }
-        // 밖에 있을때
-        if (elementTop > viewportBottom || viewportTop > elementBottom)
-        {
-          console.log(1)
-          if (!$(item).hasClass("is-visible")){
-            return;
-          }
-          per = 0;
-          $(item).removeClass("is-visible");
-        }
+  // 안에 있을때
+  rst.in = elementTop < viewportBottom && elementBottom > viewportTop;
+  // 밖에 있을때
+  rst.out = elementTop > viewportBottom || viewportTop > elementBottom;
 
-        
-        $(item).animate({
-           'width' : per + '%'
-         }, 50);
-         
-         $(item).find("span").animate({
-           'left' : per + '%'
-         });
+  return rst;
+}
 
-         /*
-         $(item).find("span").animate({
-           Counter: $(item).data("length"),
-           'left' : $(item).data("length") + '%'
-         }, {
-          duration: 300,
-          easing: 'swing',
-          step: function (now) {
-            $(item).find("span").text(Math.ceil(now) + "%");
-          }
-         });*/
-
-        })
-    }
+// 타임라인은 객체 함수형으로 생성, 랜더링
+function renderTimeline() {
   // 타임 라인
- var data = [{
+  var data = [{
    "date": "2008",
    "career": "상일여자고등학교 졸업",
    "description": ""
@@ -187,7 +186,7 @@ setProgressbar();
       "date": "2017.03.20 ~ 재직중",
       "career": "㈜CBSi",
       "description": "CBS,노컷뉴스 사이트 관리 및 리뉴얼, 이벤트성 페이지 코딩,CBS바이블 사이트 관리"
-   }];
+  }];
 
   $.each(data, function(index, item){
      $(".timeline")
@@ -204,5 +203,7 @@ setProgressbar();
   $(".timeline")
      .append($(document.createElement("li")).addClass("timeline-inverted")
          .append($(document.createElement("div")).addClass("timeline-image slide-content").html("<h4>Final<br>goal<br>Developer!</h4>")));
+}
+ 
 
 })(jQuery); // End of use strict

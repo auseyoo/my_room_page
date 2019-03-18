@@ -209,21 +209,20 @@ span.bar-width::after {
 
 .progress .bar-width {
     position: absolute;
-    width:30px;
+    width:40px;
     height: 20px;
     line-height: 20px;
     text-align: center;
     font-size: 12px;
     font-weight: 700;
-    top: -35px;
-    left: 0;
+    top: -40px;
     border-radius: 2px;
 }
 
 .progress .progress-bar .bar-width {
     background-color: #fff;
     color: #707070;
-	 transition: none;
+	transition: none;
     -webkit-transform: none;
     transform: none;
 	opacity:1;
