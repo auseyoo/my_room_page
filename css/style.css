@@ -105,7 +105,7 @@ Main components
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  z-index: 300;
+  z-index: 3000;
 }
 .no-touch #cd-vertical-nav li {
   text-align: right;
