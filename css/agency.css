@@ -477,6 +477,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 	padding: 0 1rem 1rem;
 	text-align:center;
 	letter-spacing: -1px;
+	font-size:14px;
     font-weight: 500;
     color: rgb(126, 135, 143);
     line-height: 1.5;
@@ -490,13 +491,14 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     margin-top: 0;
     margin-bottom: 30px;
 }
+.portfolio-modal .modal-content ul.list-inline li { font-size:13px; }
 .portfolio-modal .modal-content ul.list-inline strong {
-    margin-right: 5px;
+    margin-right: 10px;
+    font-size: 14px;
 	text-transform: uppercase!important;
 }
-.portfolio-modal .list-inline li.tech ul{}
-.portfolio-modal .list-inline li.tech ul li{
-	list-style:none;
+.portfolio-modal .list-inline li.cross img{
+	margin:10px 0;
 }
 .portfolio-modal .modal-content img {
     margin: 30px 0;
@@ -693,7 +695,6 @@ min-height: 150px;
 .timeline>li.timeline-inverted>.timeline-panel {
     padding: 0 20px 20px;
 }
-.portfolio-modal .modal-content h2 {font-size:2em;}
 }
 @media (min-width:1200px) {
     .timeline>li {
