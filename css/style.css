@@ -163,7 +163,8 @@ ol, ul {
 .progress-wrap h3 {
     color: #ffffff;
     text-align: left;
-    font-size:15px;
+    font-size:13px;
+    font-weight:500;
 }
 
 .progress .color1,
@@ -219,13 +220,13 @@ span.bar-width::after {
 
 .progress .bar-width {
     position: absolute;
-    width:40px;
+    width:30px;
     height: 20px;
     line-height: 20px;
     text-align: center;
     font-size: 12px;
     font-weight: 700;
-    top: -40px;
+    top: -35px;
     border-radius: 2px;
 }
 
@@ -236,6 +237,7 @@ span.bar-width::after {
     -webkit-transform: none;
     transform: none;
 	opacity:1;
+	margin-left:-5px;
 }
 
 .progress span {
@@ -250,7 +252,7 @@ span.bar-width::after {
     border-width: 8px 5px;
     border-style: solid;
     bottom: -15px;
-    right: 8px;
+    right: 15px;
     border-top-color: #ffffff !important;
     color: #222;
 }
@@ -331,12 +333,12 @@ a.close-link{
     left: calc(50% - 10px);
     left: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 30px 0;
     color: #fff;
-    background: #ff5d81;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+   background: #ff5d81 url(../img/arrow-up.png) center no-repeat;
 }
 
 .cd-img-replace {
