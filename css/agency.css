@@ -163,11 +163,18 @@ header.masthead .intro-text {
     padding-bottom: 100px;
 }
 header.masthead .intro-text .intro-lead-in {
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 15px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #828282;
+}
+header.masthead .intro-text.slide.slide-c .intro-lead-in {
+    font-size: 22px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #2e2d2d;
 }
 header.masthead .intro-text .intro-heading {
     font-size: 50px;
@@ -175,6 +182,12 @@ header.masthead .intro-text .intro-heading {
     line-height: 50px;
     margin-bottom: 25px;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+}
+header.masthead .intro-text.slide .slide-content {
+	width:100%;
+	left:0;
+	bottom:50%;
+
 }
 .intro .slide {
     width: 100%;
@@ -206,7 +219,7 @@ header.masthead .intro-text .intro-heading {
     color:#828282;
 }
 .intro .slide.slide-a .intro-lead-in.slide-a-child{
-	font-size: 40px;
+	font-size: 30px;
     margin-bottom: 15px;
     font-weight: 500;
     line-height: 1.5;
@@ -300,7 +313,7 @@ header.masthead .intro-text .intro-heading {
     transform: translateY(50px);
 }
 	header.masthead .intro-text {
-    padding-top: 300px;
+    padding-top: 200px;
     padding-bottom: 200px;
 }
 header.masthead .intro-text .intro-heading {
@@ -821,4 +834,4 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 section#history {
 	background-color: #f0f2f7;
 }
-#about .row text-center
+#about p {font-size:14px;}
