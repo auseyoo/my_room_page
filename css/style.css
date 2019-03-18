@@ -193,8 +193,8 @@ ol, ul {
 
 .progress,
 .progress-bar {
-    height: 10px;
-    line-height: 10px;
+    height: 8px;
+    line-height: 8px;
     background: #e6e6e6;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -238,6 +238,7 @@ span.bar-width::after {
     transform: none;
 	opacity:1;
 	margin-left:-5px;
+	font-weight:500;
 }
 
 .progress span {
