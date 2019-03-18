@@ -3272,13 +3272,19 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     background: no-repeat center center;
     background-size: 100% 100%}
 @media (max-width:575.98px) {
-    .navbar-expand-sm>.container, .navbar-expand-sm>.container-fluid {
+    .navbar-expand-sm>.container,
+    .navbar-expand-sm>.container-fluid {
     padding-right: 0;
     padding-left: 0;
+	}
 }
-.navbar>.container, .navbar>.container-fluid{max-width:none;}
+@media (max-width:576px){
+	.navbar>.container,
+	.navbar>.container-fluid{
+		max-width:none;
+	}
 }
-}@media (min-width:576px) {
+@media (min-width:576px) {
     .navbar-expand-sm {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -3325,7 +3331,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     background:#fff;
     color:#222;
 }
-.navbar-collapse.show {display}
+.navbar-collapse.show .navbar-nav {position:absolute; top:50%;}
 .navbar-collapse.show a.close-link {display:block;}
 .navbar-nav li{
 	display: block;

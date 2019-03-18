@@ -169,11 +169,11 @@ function renderTimeline() {
    }, {
       "date": "2015.01 ~ 2015.04",
       "career": "KF컴퓨터학원",
-      "description": "포토샵<br/>일러스트레이터회사실무 교육 수료"
+      "description": "회사실무 포토샵,<br/>일러스트레이터 교육 수료"
    }, {
       "date": "2015.06.16 ~ 2015.09.09",
       "career": "더조은컴퓨터아트학원",
-      "description": "웹표준디자인(HTML/드림위버)교육 수료"
+      "description": "웹표준디자인(HTML/드림위버),<br/>웹퍼블리셔 디지털웹디자인(HTML&CSS2.0&HTML5),<br/> 교육 수료"
    }, {
       "date": "2016.01.04 ~ 2016.04.04",
       "career": "㈜더웹스타일",
