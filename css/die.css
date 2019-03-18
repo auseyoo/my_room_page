@@ -136,7 +136,8 @@
     opacity: .3
 }
 
-#middle h2 {
+#middle h2,
+#middle h3.text-muted {
     color: #ffffff;
 }
 

@@ -5154,6 +5154,9 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 .rounded-circle {
     border-radius: 50%!important;
+    width: 100%;
+    min-width:100%!important;
+    min-height: 100%!important;
 }
 .rounded-pill {
     border-radius: 50rem!important;
@@ -7727,7 +7730,7 @@ a.text-dark:focus, a.text-dark:hover {
     color: #212529!important;
 }
 .text-muted {
-    color: #6c757d!important;
+    color: #6c757d;
 }
 .text-black-50 {
     color: rgba(0, 0, 0, .5)!important;
