@@ -54,13 +54,13 @@ section h3.section-subheading {
     padding: 20px 40px;
 }
 .btn-primary {
-    background-color: #fe3682;
-    border-color: #fe3682;
+    background-color: #ff5d81;
+    border-color: #ff5d81;
 }
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     background-color: #fff!important;
-    border-color: #fe3682!important;
-    color: #fe3682;
+    border-color: #ff5d81!important;
+    color: #ff5d81;
 }
 .btn-primary:active, .btn-primary:focus {
     -webkit-box-shadow: 0 0 0 .2rem rgba(254, 209, 55, .5)!important;
@@ -474,7 +474,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
     margin-bottom: 30px;
 }
 .portfolio-modal .modal-content p.info {
-	padding: 1rem;
+	padding: 0 1rem 1rem;
 	text-align:center;
 	letter-spacing: -1px;
     font-weight: 500;
@@ -499,7 +499,7 @@ header.masthead .slide-a .intro-heading.slide-a-child {
 	list-style:none;
 }
 .portfolio-modal .modal-content img {
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 .portfolio-modal .modal-content button {
     cursor: pointer;
