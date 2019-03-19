@@ -149,7 +149,7 @@ img::-moz-selection {
     position: relative;
     text-align: center;
     color: #fff;
-    background-image: url(/img/bg/bg2.jpg);
+    background-image: url(/img/bg/bg1.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -207,7 +207,7 @@ header.masthead .intro-text.slide .slide-content {
     overflow: hidden;
 }
 .intro .slide.slide-a {
-    background: url(../img/bg/bg1.jpg);
+    background: url(../img/bg/bg12.jpg);
     background-size: cover;
     z-index: 400;
 }
@@ -276,7 +276,7 @@ header.masthead .intro-text.slide .slide-content {
 }
 /*Slide-C*/
 .intro .slide.slide-c {
-    background: url(../img/bg/bg3.jpg);
+    background: url(../img/bg/bg6.jpg);
      background-size:  cover;
     z-index: 200;
 }
