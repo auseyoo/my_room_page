@@ -173,14 +173,14 @@ function renderTimeline() {
    }, {
       "date": "2015.06.16 ~ 2015.09.09",
       "career": "더조은컴퓨터아트학원",
-      "description": "웹표준디자인(HTML/드림위버),<br/>웹퍼블리셔 디지털웹디자인(HTML&CSS2.0&HTML5),<br/> 교육 수료"
+      "description": "웹표준디자인(HTML/드림위버),<br/>웹퍼블리셔 디지털웹디자인(HTML&CSS2.0&HTML5)<br/> 교육 수료"
    }, {
       "date": "2016.01.04 ~ 2016.04.04",
       "career": "㈜더웹스타일",
       "description": "제휴회사 페이지 코딩, 이벤트페이지 코딩, 웹접근성 인증마크 획득 프로젝트"
    }, {
       "date": "2016.05.04 ~ 2016.11.04",
-      "career": "(주)옐로트래블랩스(현재 '옐로오투오'로 합병)",
+      "career": "(주)옐로트래블랩스",
       "description": "우리펜션 사이트 리뉴얼, 사이트 관리, 이벤트페이지 코딩,어드민코딩"
    }, {
       "date": "2017.03.20 ~ 재직중",
@@ -190,6 +190,12 @@ function renderTimeline() {
 
   $.each(data, function(index, item){
      $(".timeline")
+        .append($(document.createElement("div")).attr("data-text", item.date).addClass("timeline-item")
+            .append($(document.createElement("div")).addClass("timeline__content")
+                .append($(document.createElement("img")).attr("src", "img/about/" + (index + 1) + ".jpg").addClass("timeline__img"))
+                .append($(document.createElement("h2")).addClass("timeline__content-title").text(item.career))
+                .append($(document.createElement("p")).addClass("timeline__content-desc").html(item.description))));
+     /*
         .append($(document.createElement("li")).addClass(index % 2 != 0 ? "timeline-inverted" : "")
             .append($(document.createElement("div")).addClass("timeline-image slide-content")
                  .append($(document.createElement("img")).addClass("rounded-circle img-fluid").attr("src", "img/about/" + (index + 1)+".jpg")))
@@ -198,12 +204,64 @@ function renderTimeline() {
                     .append($(document.createElement("em")).text(item.date))
                     .append($(document.createElement("h4")).addClass("subheading").text(item.career)))
                  .append($(document.createElement("div")).addClass("timeline-body slide-content")
-                    .append($(document.createElement("p")).addClass("text-muted").html(item.description)))));
+                    .append($(document.createElement("p")).addClass("text-muted").html(item.description)))));*/
   });
-  $(".timeline")
-     .append($(document.createElement("li")).addClass("timeline-inverted")
-         .append($(document.createElement("div")).addClass("timeline-image slide-content").html("<h4>Final<br>goal<br>Developer!</h4>")));
 }
+ 
+$.fn.timeline = function() {
+  var selectors = {
+    id: $(this),
+    item: $(this).find(".timeline-item"),
+    activeClass: "timeline-item--active",
+    img: ".timeline__img"
+  };
+  selectors.item.eq(0).addClass(selectors.activeClass);
+  selectors.id.css(
+    "background-image",
+    "url(" +
+      selectors.item
+        .first()
+        .find(selectors.img)
+        .attr("src") +
+      ")"
+  );
+  var itemLength = selectors.item.length;
+  $(window).scroll(function() {
+    var max, min;
+    var pos = $(this).scrollTop();
+    selectors.item.each(function(i) {
+      min = $(this).offset().top;
+      max = $(this).height() + $(this).offset().top;
+      var that = $(this);
+      if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+        selectors.item.removeClass(selectors.activeClass);
+        selectors.id.css(
+          "background-image",
+          "url(" +
+            selectors.item
+              .last()
+              .find(selectors.img)
+              .attr("src") +
+            ")"
+        );
+        selectors.item.last().addClass(selectors.activeClass);
+      } else if (pos <= max && pos + $('.navbar.navbar-expand-lg').outerHeight(true) >= min) {
+        selectors.id.css(
+          "background-image",
+          "url(" +
+            $(this)
+              .find(selectors.img)
+              .attr("src") +
+            ")"
+        );
+        selectors.item.removeClass(selectors.activeClass);
+        $(this).addClass(selectors.activeClass);
+      }
+    });
+  });
+};
+
+$("#timeline-1").timeline();
  
 
 })(jQuery); // End of use strict

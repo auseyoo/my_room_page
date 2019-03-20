@@ -51,6 +51,7 @@
     content: '';
     width: 1em;
     height: 1em;
+    background-image: url("img/ico_darr.svg");
     background-position: 0 0;
     background-size: 0.9em 0.9em;
     background-repeat: no-repeat;
