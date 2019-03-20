@@ -89,7 +89,7 @@ img::-moz-selection {
     font-size: 30px;
     padding: 0;
     text-transform: uppercase;
-    color: #828282;
+    color: #fff;
     border: 0;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 #mainNav.navbar-shrink.navbar {
@@ -99,7 +99,7 @@ img::-moz-selection {
     color: #6c757d;
 }
 #mainNav .navbar-brand {
-    color: #ff5d81;
+    color: #fff;
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
 #mainNav.navbar-shrink .navbar-brand {
     display: flex;
@@ -120,7 +120,6 @@ img::-moz-selection {
     color: #fec503;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
     color: #828282;
@@ -151,181 +150,64 @@ img::-moz-selection {
     font-size: 1.25em;
     padding: 12px 0;
 }
-}header.masthead {
+}
+header.masthead {
     height: 100vh;
     position: relative;
     text-align: center;
-    color: #fff;
-    background-image: url(/img/bg/bg2.jpg);
+    background-image: url(../img/bg/bg12.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    font-size:45px;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    color:#fff;
 }
 header.masthead .container {
     max-width: none;
 }
-header.masthead .intro-text {
+header.masthead .intro {
     padding-top: 150px;
     padding-bottom: 100px;
 }
-header.masthead .intro-text .intro-lead-in {
+header.masthead .intro .intro-lead-in{
     font-size: 30px;
-    margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 40px;   
+}
+header.masthead .intro .intro-heading  {
+	display:inline-block;
+    font-size: 45px;
+    font-weight: 600;
     line-height: 1.5;
-    color: #828282;
+   border: 5px solid #fff;
+    padding: 10px 1em;
+    margin-bottom: 10px;
 }
-header.masthead .intro-text .intro-heading {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
-    margin-bottom: 25px;
-    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
-}
-header.masthead .intro-text.slide .slide-content {
-	width:100%;
-	left:0;
-	bottom:50%;
+header a{display:block;position: absolute;bottom: 0;left: 50%;margin-left: -15.5px;
+  animation-name:move_down;-webkit-animation-name:move_down;-moz-animation-name:move_down;-o-animation-name:move_down;-ms-animation-name :move_down;
+  animation-duration:1.7s;-webkit-animation-duration:1.7s;-moz-animation-duration:1.7s;-o-animation-duration:1.7s;-ms-animation-duration:1.7s;
+  animation-delay:0s;-webkit-animation-delay:0s;-moz-animation-delay:0s;-o-animation-delay:0s;-ms-animation-delay:0s;
+  animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;
+  animation-direction:alternate;-webkit-animation-direction:alternate;-moz-animation-direction:alternate;-o-animation-direction:alternate;-ms-animation-direction:alternate;}
 
+header a,
+header a>i.fa-angle-double-down{
+	color: rgba(255, 255, 255, 0.3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#4CFFFFFF', EndColorStr='#4CFFFFFF')";
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#4CFFFFFF', EndColorStr='#4CFFFFFF');
 }
-.intro .slide {
-    width: 100%;
-    height: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../images/bg/cloud-3282436_1920.jpg);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    overflow: hidden;
-}
-.intro .slide.slide-a {
-    background: url(../img/bg/bg1.jpg);
-    background-size: cover;
-    z-index: 400;
-}
-.intro .slide.slide-a .slide-a-child {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s;
-    color:#828282;
-}
-.intro .slide.slide-a .intro-lead-in.slide-a-child{
-	font-size: 30px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    line-height: 1.5;
-}
-.intro .slide.slide-a .intro-heading-in.slide-a-child{
-	font-size:2rem;
-}
-.intro .slide.slide-a .slide-a-child.is-visible {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-}
-.intro .slide.slide-a p {
-    font-size: 25px;
-}
-/*Slide-B*/
-.intro .slide.slide-b .intro-lead-in.slide-a-child{
-	font-size: 40px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    line-height: 1.5;
-}
-.intro .slide.slide-b {
-    background: rgba(28,  36,  65,  0.93);
-    background: url(../img/bg/bg2.jpg);
-    background-size: cover;
-    z-index: 300;
-}
-.intro .slide.slide-b h2 {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-}
-.intro .slide.slide-b p:first-of-type {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
-    margin-bottom: 20px;
-}
-.intro .slide.slide-b p:last-of-type {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-}
-.intro .slide.slide-b .slide-b-child {
-    transition: all 1s;
-    opacity: 0;
-}
-.intro .slide.slide-b .slide-b-child.is-visible {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-}
-header.masthead .intro-text .intro-lead-in.slide-b-child{
-	font-size: 30px;
-    line-height: 1.5;
-    margin-bottom:10px;
-}
-/*Slide-C*/
-.intro .slide.slide-c {
-    background: url(../img/bg/bg3.jpg);
-     background-size:  cover;
-    z-index: 200;
-}
-.intro .slide.slide-c .slide-c-child {
-    transition: all 1s cubic-bezier(0.25, 0.25, 0.23, 1.405);
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    opacity: 0;
-    color:#828282;
-}
-.intro .slide.slide-c .slide-c-child.is-visible {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-}
-.intro .slide.slide-d {
-    background: url(../images/bg/paint-268231_1920.jpg);
-    background-size: cover;
-    z-index: 100;
-}
-.intro .slide.slide-d .slide-d-child {
-    transition: all 1s;
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-}
-.intro .slide.slide-d .slide-d-child.is-visible {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-}
-.intro .slide.slide-d button.slide-d-child {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-}
-	header.masthead .intro-text {
-    padding-top: 200px;
-    padding-bottom: 200px;
-}
-header.masthead .intro-text .intro-heading {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 75px;
-    margin-bottom: 50px;
-    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'}
-}
-header.masthead .slide-a .intro-heading.slide-a-child {
-	color:#828282;
+header a>i.fa-angle-double-down{
+display: inline-block;
+    
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
 }
 .service-heading {
     margin: 15px 0;
@@ -714,9 +596,9 @@ min-height: 150px;
     min-height: 170px;
 	}
 }
-@media (max-width:576px){
-	header.masthead .intro-text .intro-heading {
-		font-size:2rem;
+@media (max-width:640px){
+	header.masthead .intro .intro-heading {
+		font-size:0.6em;
 	}
 }
 .timeline>li .timeline-panel {
@@ -837,6 +719,7 @@ section#history {
 	padding:0 !important;
 }
 #about p {font-size:14px;}
+#about strong {margin-right:1%;}
 
 @import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
 .timeline {
@@ -1000,3 +883,12 @@ section#history {
   display: inline-block;
   font-family: Cardo;
 }
+#about .container .text-center {text-align:center;}
+#about .container .text-center .slide-content {}
+#about .container .text-center .text-left {margin:2em auto 0;}
+#about .container .text-center dl{padding-left:172px;overflow:hidden; line-height:1.3;text-align:left;}
+#about .container .text-center dl dt {float:left; margin-left:-100px;}
+#about .container .text-center dl dd {position:relative;}
+#about .container .text-center dl dd:before {content:":"; display:inline; position: absolute;
+    left: -10px;
+    top: -10%;}

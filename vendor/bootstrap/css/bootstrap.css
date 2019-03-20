@@ -3203,6 +3203,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    max-width:none;
 }
 .navbar-brand {
     display: inline-block;
@@ -3332,11 +3333,13 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     color:#222;
 }
 .navbar-collapse.show .navbar-nav {position:absolute; top:50%;}
+
 .navbar-collapse.show a.close-link {display:block;}
 .navbar-nav li{
 	display: block;
     margin-right: 0;
     margin-bottom: 2rem;
+    font-size:1.5rem;
 }
 #mainNav .navbar-toggler.navbar-toggler-right{display:flex;}
 }
@@ -6118,6 +6121,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
     right: 0;
     left: 0;
     z-index: 1030;
+    background: #e9ecefa8;
 }
 .fixed-bottom {
     position: fixed;

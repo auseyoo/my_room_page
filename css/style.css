@@ -161,10 +161,10 @@ ol, ul {
 .progress-wrap *{ opacity: 1 !important;}
 
 .progress-wrap h3 {
-    color: #ffffff;
+    color: #383d41;
     text-align: left;
     font-size:13px;
-    font-weight:500;
+    font-weight:600;
 }
 
 .progress .color1,
@@ -475,7 +475,7 @@ Main components
   opacity: 1;
 }
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: white;
+  background-color: #dee2e6;
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
@@ -500,9 +500,10 @@ Main components
   padding: .4em .5em;
   color: white;
   border-color: pink;
+  border-radius:5px;
   background-color: pink;
   font-size: 15px;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;

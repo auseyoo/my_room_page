@@ -57,7 +57,7 @@
     $(".navbar-collapse").removeClass("show");
   });
 
-setHeaderSliderInterval();
+//setHeaderSliderInterval();
 setProgressbar();
 setVisible();
 renderTimeline();
