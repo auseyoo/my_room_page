@@ -155,9 +155,8 @@ header.masthead {
     height: 100vh;
     position: relative;
     text-align: center;
-    background-image: url(../img/bg/bg12.jpg);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-image: url(../img/bg/bg12.jpg) no-repeat;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     font-size:45px;
