@@ -155,7 +155,7 @@ header.masthead {
     height: 100vh;
     position: relative;
     text-align: center;
-    background-image: url(../img/bg/bg12.jpg) no-repeat;
+    background: url(../img/bg/bg12.jpg) no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -164,6 +164,8 @@ header.masthead {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     color:#fff;
+
+
 }
 header.masthead .container {
     max-width: none;
