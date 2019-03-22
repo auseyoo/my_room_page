@@ -155,16 +155,19 @@ header.masthead {
     height: 100vh;
     position: relative;
     text-align: center;
-    background-image: url(../img/bg/bg12.jpg);
+    /* background-image: url(../img/bg/bg1.jpg); */
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    font-size:45px;
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
+    /* background-size: cover; */
+    font-size: 45px;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    color:#fff;
+ 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+ 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    color: #fff;
+    background: url(../img/bg/bg1.png),#7b4397;
+    background: url(../img/bg/bg1.png),-webkit-gradient(linear,right top,left top,from(#7b4397),to(#dc2430));
+    background: url(../img/bg/bg1.png),linear-gradient(to left,#7b4397,#dc2430);
 }
 header.masthead .container {
     max-width: none;
