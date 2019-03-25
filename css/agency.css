@@ -173,8 +173,8 @@ header.masthead .container {
     max-width: none;
 }
 header.masthead .intro {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 300px;
+    padding-bottom: 300px;
 }
 header.masthead .intro .intro-lead-in{
     font-size: 30px;
