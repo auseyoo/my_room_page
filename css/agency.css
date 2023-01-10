@@ -767,7 +767,7 @@ section#history {
   }
 }
 .timeline-item {
-  padding: 40px 0;
+  padding: 45px 0;
   opacity: 0.3;
   filter: blur(2px);
   transition: 0.5s;

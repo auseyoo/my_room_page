@@ -176,23 +176,31 @@ function renderTimeline() {
       "description": "웹표준디자인(HTML/드림위버),<br/>웹퍼블리셔 디지털웹디자인(HTML&CSS2.0&HTML5)<br/> 교육 수료"
    }, {
       "date": "2016.01.04 ~ 2016.04.04",
-      "career": "㈜더웹스타일",
+      "career": "(주)더웹스타일",
       "description": "제휴회사 페이지 코딩, 이벤트페이지 코딩, 웹접근성 인증마크 획득 프로젝트"
    }, {
       "date": "2016.05.04 ~ 2016.11.04",
       "career": "(주)옐로트래블랩스",
       "description": "우리펜션 사이트 리뉴얼, 사이트 관리, 이벤트페이지 코딩,어드민코딩"
    }, {
-      "date": "2017.03.20 ~ 재직중",
-      "career": "㈜CBSi",
+      "date": "2017.03.20 ~ 2019.06",
+      "career": "(주)CBSi",
       "description": "CBS,노컷뉴스 사이트 관리 및 리뉴얼, 이벤트성 페이지 코딩,CBS바이블 사이트 관리"
-  }];
+  },{
+    "date": "2019.06 ~ 2019.09",
+    "career": "인터파크",
+    "description": "2020 도쿄 올림픽 사이트 구축 및 운영, 올림픽 티켓 어드민 사이트 구축"
+},{
+  "date": "2019.10 ~ 2020.01",
+  "career": "(주)샐러드소프트 프리랜서",
+  "description": "항공사 에어프레미아 포털사이트 구축(React, Bootstrap)"
+}];
 
   $.each(data, function(index, item){
      $(".timeline")
         .append($(document.createElement("div")).attr("data-text", item.date).addClass("timeline-item")
             .append($(document.createElement("div")).addClass("timeline__content")
-                .append($(document.createElement("img")).attr("src", "img/about/" + (index + 1) + ".jpg").addClass("timeline__img"))
+                .append($(document.createElement("img")).attr("src", "img/about/" + (index + 1) + ".jpg" || ".png").addClass("timeline__img"))
                 .append($(document.createElement("h2")).addClass("timeline__content-title").text(item.career))
                 .append($(document.createElement("p")).addClass("timeline__content-desc").html(item.description))));
      /*
