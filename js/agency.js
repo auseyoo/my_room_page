@@ -194,6 +194,14 @@ function renderTimeline() {
   "date": "2019.10 ~ 2020.01",
   "career": "(주)샐러드소프트 프리랜서",
   "description": "항공사 에어프레미아 포털사이트 구축(React, Bootstrap)"
+},{
+  "date": "2020.03 ~ 2020.09",
+  "career": "(주)오지큐",
+  "description": "Vue.js 기반 네이버 오지큐마켓 사이트 구축 퍼블리싱 및 컴포넌트 개발"
+},{
+  "date": "2021.08 ~ 2021.11",
+  "career": "LG CNS",
+  "description": "ERP 시스템사이트 경량화를 위한 React 디자인 공통화 작업 및 컴포넌트 개발"
 }];
 
   $.each(data, function(index, item){

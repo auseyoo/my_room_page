@@ -2,8 +2,47 @@
  * Start Bootstrap - Agency v5.0.5 (https://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
- */body {
-    overflow-x: hidden;}
+ */body {overflow-x: hidden;}
+
+ .container {
+  overflow-y: overlay;
+  transition: all 0.4s ease;
+}
+
+.container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  box-shadow: inset 6px 6px 0; 
+}
+
+.container::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.container.scroll-hidden {
+  color: transparent;
+}
+
+ /* .container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: #217af4;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, .1);
+} */
 p {
     line-height: 1.75;
 }
@@ -365,7 +404,7 @@ display: inline-block;
 .portfolio-modal .modal-content h2 {
     font-size: 1.4em;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
     letter-spacing: -1px;
 }
 .portfolio-modal .modal-content p {
@@ -390,6 +429,9 @@ display: inline-block;
     margin-bottom: 30px;
 }
 .portfolio-modal .modal-content ul.list-inline li { font-size:13px; }
+.portfolio-modal .modal-content ul.list-inline li.cross strong {
+  display: block;
+}
 .portfolio-modal .modal-content ul.list-inline strong {
     margin-right: 10px;
     font-size: 14px;
@@ -397,9 +439,11 @@ display: inline-block;
 }
 .portfolio-modal .list-inline li.cross img{
 	margin:10px 0;
+  width: 30%;
 }
 .portfolio-modal .modal-content img {
     margin: 30px 0;
+    width: 73%;
 }
 .portfolio-modal .modal-content button {
     cursor: pointer;
@@ -742,6 +786,8 @@ section#history {
   box-sizing: border-box;
   font-family: "Pathway Gothic One", sans-serif;
   color: #fff;
+  /* color: #9e9ba4; */
+    text-shadow: 3px 3px 0 #9e9ba4;
 }
 .timeline__content-desc {
   margin: 0;
@@ -853,7 +899,7 @@ section#history {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(99, 99, 99, 0.8);
+  /* background: rgba(99, 99, 99, 0.8); */
   content: "";
 }
 .timeline-header {
