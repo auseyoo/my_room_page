@@ -17,7 +17,7 @@ ol, ul {
     font-size: 12px;
     letter-spacing: 0.12rem;
     text-transform: uppercase;
-        position: absolute;
+    position: absolute;
     bottom: 110px;
     left: 50%;
     margin-left: -10px;
@@ -32,7 +32,7 @@ ol, ul {
     text-indent:-3000em;
 }
 
-..scroll_text{ /* Safari 4+ */-moz-animation:bounce-fade 1.2s infinite; /* Fx 5+ */-o-animation:bounce-fade 1.2s infinite; /* Opera 12+ */animation:bounce-fade 1.2s infinite; /* IE 10+ */}
+.scroll_text{ /* Safari 4+ */-moz-animation:bounce-fade 1.2s infinite; /* Fx 5+ */-o-animation:bounce-fade 1.2s infinite; /* Opera 12+ */animation:bounce-fade 1.2s infinite; /* IE 10+ */}
 
 @-webkit-keyframes bounce-fade {
 0%   { opacity: 0; bottom: 70px; }
@@ -68,59 +68,62 @@ ol, ul {
 .scroll_text:after {
     top: 0.04rem;
 }
+.bg-light {
+  background-image: linear-gradient(180deg, #ced4da, #7c88a5);
+}
  .title_text_slide { 
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 40px;
-            color: rgba(255,255,255,0.8);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  color: rgba(255,255,255,0.8);
 } 
-            
+
 .title_text_slide > span {
-                position: relative;
-                animation: visualTxtAni 4s ease-in-out infinite;
-                opacity: 0;
+  position: relative;
+  animation: visualTxtAni 4s ease-in-out infinite;
+  opacity: 0;
 }
 .title_text_slide > span  i {
-                    position: relative;
-                    font-style: normal;
-                    text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
- }
+  position: relative;
+  font-style: normal;
+  text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
+}
 
 .title_text_slide > span:nth-child(1){
-                    animation-delay: .1s;
+  animation-delay: .1s;
 }
-                .title_text_slide > span:nth-child(2){
-                    animation-delay: .2s;
-                }
-                .title_text_slide > span:nth-child(3){
-                    animation-delay: .3s;
-                }
-                .title_text_slide > span:nth-child(4){
-                    animation-delay: .4s;
-                }
-                .title_text_slide > span:nth-child(5){
-                    animation-delay: .5s;
-                }
-                .title_text_slide > span:nth-child(6){
-                    animation-delay: .6s;
-                }
-                .title_text_slide > span:nth-child(7){
-                    animation-delay: .7s;
-                }
-                .title_text_slide > span:nth-child(8){
-                    animation-delay: .8s;
-                }
-                .title_text_slide > span:nth-child(9){
-                    animation-delay: .9s;
-                }
-                .title_text_slide > span:nth-child(10){
-                    animation-delay: 1s;
-                }
-                .title_text_slide > span:nth-child(11){
-                    animation-delay: 1.1s;
-                }
+.title_text_slide > span:nth-child(2){
+  animation-delay: .2s;
+}
+.title_text_slide > span:nth-child(3){
+  animation-delay: .3s;
+}
+.title_text_slide > span:nth-child(4){
+  animation-delay: .4s;
+}
+.title_text_slide > span:nth-child(5){
+  animation-delay: .5s;
+}
+.title_text_slide > span:nth-child(6){
+  animation-delay: .6s;
+}
+.title_text_slide > span:nth-child(7){
+  animation-delay: .7s;
+}
+.title_text_slide > span:nth-child(8){
+  animation-delay: .8s;
+}
+.title_text_slide > span:nth-child(9){
+  animation-delay: .9s;
+}
+.title_text_slide > span:nth-child(10){
+  animation-delay: 1s;
+}
+.title_text_slide > span:nth-child(11){
+  animation-delay: 1.1s;
+}
 
 
 #middle {
@@ -321,7 +324,7 @@ span.bar-width::after {
 .top_btn{
     display:block;
     color:#6c757d;
-        display: block;
+    display: block;
     text-align: center;
     line-height: 2.3;
 }
@@ -475,16 +478,15 @@ Main components
   opacity: 1;
 }
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: #dee2e6;
+  background-color: #c26360;
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
-  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
   top: 8px;
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background-color: #d88683;
+  background-color: #f3c4c4;
   -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
   -moz-transition: -moz-transform 0.2s, background-color 0.5s;
   transition: transform 0.2s, background-color 0.5s;
