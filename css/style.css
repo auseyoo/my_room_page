@@ -622,7 +622,7 @@ Main components
   left: -8px;
 }
 .touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
-  -webkit-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); 
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -640,11 +640,25 @@ Main components
 .touch #cd-vertical-nav li:last-child a {
   border-bottom: none;
 }
-
+@media (min-width: 300px) {
+  #middle .chart-padding {
+      -ms-flex: 0 0 33%;
+      flex: 0 0 33%;
+      max-width: 33%;
+  }
+}
+@media (min-width: 576px) {
+  #middle .chart .img-fluid {
+    max-width: 256px;
+    max-height: 256px;
+    min-height: 256px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .touch .cd-nav-trigger, .touch #cd-vertical-nav {
     bottom: 40px;
   }
+  
 }
 @media (max-width: 992px){
 	.no-touch #cd-vertical-nav {display:none;}
